@@ -1,4 +1,3 @@
-//var webpack = required("webpack");
 var path = require("path");
 
 var DIST_DIR = path.resolve(__dirname, "dist");
@@ -24,7 +23,5 @@ var config = {
         ]
     }
 };
-
-
 
 module.exports = config;
