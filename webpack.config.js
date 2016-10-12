@@ -1,8 +1,8 @@
 var webpack = require('webpack');
 var path = require("path");
 
-var DIST_DIR = path.resolve(__dirname, "dist");
-var SRC_DIR = path.resolve(__dirname, "src");
+var DIST_DIR = path.resolve(__dirname, "dist");  //Production files that will be availble for the browser
+var SRC_DIR = path.resolve(__dirname, "src");    //Development files that will only be available in production
 
 var config = {
     entry: SRC_DIR + "/app/index.js",

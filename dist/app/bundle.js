@@ -81,6 +81,12 @@
 	    _createClass(App, [{
 	        key: 'render',
 	        value: function render() {
+	
+	            var user = {
+	                name: "Anna",
+	                hobbies: ["Sports", "Chess"]
+	            };
+	
 	            return _react2.default.createElement(
 	                'div',
 	                { className: 'container' },
@@ -99,7 +105,7 @@
 	                    _react2.default.createElement(
 	                        'div',
 	                        { className: 'col-xs-10 col-xs-offset-1' },
-	                        _react2.default.createElement(_Home.Home, null)
+	                        _react2.default.createElement(_Home.Home, { name: "Max", age: 27, user: user })
 	                    )
 	                )
 	            );
@@ -22102,13 +22108,46 @@
 	    _createClass(Home, [{
 	        key: "render",
 	        value: function render() {
+	
+	            console.log(this.props.user);
+	            // console.log(animal["name"]);
+	            var text = "something";
+	            //var myUser = this.props.user;
+	            //<p>In a new Component! {this.props.user}</p>
+	
+	
 	            return _react2.default.createElement(
 	                "div",
 	                null,
 	                _react2.default.createElement(
 	                    "p",
 	                    null,
-	                    "In a new Component!"
+	                    "In a new Component! ",
+	                    this.props.name
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "In a new Component! name object ",
+	                    this.props.user.name
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    "In a new Component! name object ",
+	                    this.props.user.hobbies[1]
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    " ",
+	                    text
+	                ),
+	                _react2.default.createElement(
+	                    "p",
+	                    null,
+	                    " ",
+	                    text
 	                )
 	            );
 	        }
